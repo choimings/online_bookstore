@@ -1,15 +1,26 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import cors from "cors";
+import bookRoutes from "./routes/bookRoutes";
+import { connectDB } from "../database/database";
 
 const app = express();
 const PORT = 3000;
 
-// JSON 요청을 처리할 수 있도록 설정
+app.use(cors());
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, TypeScript with Node.js!");
+// DB 연결
+connectDB();
+
+// API 엔드포인트 추가
+app.use("/api", bookRoutes);
+
+// 기본 라우트 (테스트용)
+app.get("/", (req, res) => {
+  res.send("📚 Welcome to the Bookstore API!");
 });
 
+// 서버 실행
 app.listen(PORT, () => {
   console.log(`🚀 Server is running at http://localhost:${PORT}`);
 });
