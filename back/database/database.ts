@@ -1,7 +1,7 @@
-import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
+dotenv.config(); // 환경 변수를 가장 먼저 로드
 
-dotenv.config(); // .env 파일 로드
+import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -11,7 +11,7 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     dialect: "postgres",
     port: Number(process.env.DB_PORT) || 5432,
-    logging: false, // 콘솔 로그 제거
+    logging: false,
   }
 );
 
