@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface Book {
   book_id: number;
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const booksPerPage = 10; // 한 페이지당 10개
+  const navigate = useNavigate(); // 페이지 이동 함수
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -64,6 +66,7 @@ const Home: React.FC = () => {
                   src={book.cover_image_path}
                   alt={book.title}
                   className="w-40 h-56 mx-auto mb-2 object-cover shadow-md"
+                  onClick={() => navigate(`/book/${book.book_id}`)}
                 />
                 <h2 className="font-medium">{book.title}</h2>
                 <p className="text-gray-500">{book.author}</p>
