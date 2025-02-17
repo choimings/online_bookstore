@@ -10,11 +10,14 @@
    cd your-repository
 
 2. **패키지 설치**
-   ```npm install
+   ```
+   npm install
 
 3. **데이터베이스 설정**
-   ```npx sequelize db:migrate
+   ```
+   npx sequelize db:migrate
    npx sequelize db:seed:all  # (선택) 초기 데이터 입력
    
 4. **서버 실행**
-   ```npm run dev
+   ```
+   npm run dev
