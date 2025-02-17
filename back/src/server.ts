@@ -4,7 +4,7 @@ import bookRoutes from "./routes/bookRoutes";
 import { connectDB } from "../database/database";
 
 const app = express();
-const PORT = 3000;
+const PORT = 8001;
 
 app.use(cors());
 app.use(express.json());
