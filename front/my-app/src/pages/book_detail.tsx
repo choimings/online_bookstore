@@ -77,7 +77,10 @@ const BookDetail: React.FC = () => {
             alt={book.title}
             className="w-60 h-80 object-cover shadow-md"
           />
-          <button className="mt-4 px-4 py-2 bg-gray-300 text-black rounded-md">
+          <button
+            className="mt-4 px-4 py-2 bg-gray-300 text-black rounded-md"
+            onClick={() => navigate(`/book_manage/${id}`)}
+          >
             책 정보 수정하기
           </button>
         </div>

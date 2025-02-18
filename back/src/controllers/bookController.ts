@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import Book from "../models/book";
 
-// 📌 1. 전체 책 목록 조회 (cover_image_path, title, author만 조회)
+// 📌 1. 전체 책 목록 조회
 export const getAllBooks = async (
   req: Request,
   res: Response
