@@ -120,6 +120,13 @@ const Home: React.FC = () => {
           )}
         </>
       )}
+      {/* 책 추가하기 버튼 (우측 하단) */}
+      <button
+        onClick={() => navigate("/book_add")}
+        className="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600 transition"
+      >
+        📖 책 추가하기
+      </button>
     </div>
   );
 };

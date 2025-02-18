@@ -80,9 +80,9 @@ const BookDetail: React.FC = () => {
         {/* 책 정보 */}
         <div className="w-2/3 ml-10">
           <h1 className="text-2xl font-bold">{book.title}</h1>
-          <h2 className="text-lg text-gray-600 mt-2">책 상세 정보</h2>
+          <h2 className="text-lg text-gray-600 mt-6">책 상세 정보</h2>
 
-          <div className="mt-4 space-y-2 text-lg">
+          <div className="mt-6 space-y-2 text-lg">
             <p>
               <strong>책 이름:</strong> {book.title}
             </p>
