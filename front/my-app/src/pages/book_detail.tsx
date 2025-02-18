@@ -58,14 +58,6 @@ const BookDetail: React.FC = () => {
         >
           RGT Bookstore
         </h1>
-        <div className="relative w-96">
-          <input
-            type="text"
-            placeholder="검색어를 입력하세요..."
-            className="w-full border border-gray-300 rounded-full px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <button className="absolute right-3 top-2 text-gray-500">🔍</button>
-        </div>
       </header>
 
       {/* 책 상세 정보 */}
