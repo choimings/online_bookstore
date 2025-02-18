@@ -67,7 +67,7 @@ const Home: React.FC = () => {
           />
           <button
             onClick={() => setCurrentPage(1)}
-            className="ml-2 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
+            className="ml-2 text-white px-4 py-2 rounded-full hover:bg-purple-600"
           >
             🔍
           </button>
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
                   onClick={() => setCurrentPage(index + 1)}
                   className={`px-4 py-2 rounded-md mx-1 ${
                     currentPage === index + 1
-                      ? "bg-blue-500 text-white"
+                      ? "bg-purple-500 text-white"
                       : "bg-gray-300 text-black"
                   }`}
                 >
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
       {/* 책 추가하기 버튼 (우측 하단) */}
       <button
         onClick={() => navigate("/book_add")}
-        className="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600 transition"
+        className="fixed bottom-8 right-8 bg-purple-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-purple-600 transition"
       >
         📖 책 추가하기
       </button>

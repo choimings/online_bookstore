@@ -125,7 +125,7 @@ const BookAdd: React.FC = () => {
         />
         <button
           type="submit"
-          className={`w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 ${
+          className={`w-full bg-purple-500 text-white py-2 rounded-md hover:bg-purple-600 ${
             loading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={loading}
